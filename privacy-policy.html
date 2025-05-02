@@ -4,74 +4,162 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy</title>
+  <title>Privacy Policy - WhatsApp Privacy Enhancer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-      max-width: 800px;
-    }
-    h1, h2, h3 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.8;
+      background-color: #f9f9f9;
       color: #333;
     }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #128C7E; /* WhatsApp green */
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-align: center;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #333;
+      font-size: 1.8em;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      border-left: 4px solid #128C7E;
+      padding-left: 10px;
+    }
+    h3 {
+      color: #555;
+      font-size: 1.4em;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin: 0.5em 0;
+      font-size: 1.1em;
+    }
+    ul {
+      margin: 0.5em 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 0.5em;
+      font-size: 1.1em;
+    }
     a {
-      color: #007BFF;
+      color: #128C7E;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
     a:hover {
+      color: #0a6155;
       text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #e0e0e0;
+      padding-top: 1em;
+    }
+    .highlight {
+      background-color: #f1f8f7;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin: 1em 0;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+  <div class="container">
+    <h1>Privacy Policy</h1>
 
-  <h2>1. Introduction</h2>
-  <p>Welcome to our chrome extension. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Chrome extension.</p>
+    <h2>1. Introduction</h2>
+    <p>Welcome to the <strong>WhatsApp Privacy Enhancer</strong> Chrome extension ("we," "us," or "our"). We are committed to protecting your privacy and ensuring transparency about how we handle your data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Chrome extension ("Extension"). By installing and using the Extension, you agree to the practices described in this policy.</p>
+    <div class="highlight">
+      <p>We prioritize your privacy: the WhatsApp Privacy Enhancer operates entirely on your device and does not collect or transmit any personal data.</p>
+    </div>
 
-  <h2>2. Information We Collect</h2>
-  <h3>Personal Information</h3>
-  <ul>
-    <li><strong>Email:</strong> Collected during the login process to authenticate users.</li>
-    <li><strong>Password:</strong> Securely handled for user authentication.</li>
-  </ul>
+    <h2>2. Information We Collect</h2>
+    <h3>2.1 Personal Information</h3>
+    <p>We do not collect any personal information, such as your name, email address, phone number, or any other personally identifiable information (PII). The Extension does not require user authentication or account creation.</p>
 
-  <h3>Usage Data</h3>
-  <ul>
-    <li><strong>Media Files:</strong> Images or videos uploaded through the extension.</li>
-  </ul>
+    <h3>2.2 Usage Data</h3>
+    <p>We do not collect usage data, such as your browsing history, clicks, or interactions with the Extension, beyond what is necessary for its core functionality. Specifically:</p>
+    <ul>
+      <li><strong>Blur Mode Preference:</strong> The Extension uses Chrome's <code>storage.sync</code> API to store your selected blur mode (e.g., "No Blur," "Blur All") locally on your device and sync it across devices if you are signed into Chrome. This preference is not personally identifiable and is only used to maintain your settings.</li>
+      <li><strong>Debugging Logs:</strong> The Extension logs selector matches and DOM inspection details to the browser console for debugging purposes (e.g., to ensure compatibility with WhatsApp Web's UI). These logs are not stored, transmitted, or linked to any user identity.</li>
+    </ul>
 
-  <h2>3. How We Use Your Information</h2>
-  <ul>
-    <li><strong>Authentication:</strong> To verify user identity and manage sessions.</li>
-    <li><strong>Data Storage:</strong> Store remarks and associated media files.</li>
-    <li><strong>Service Improvement:</strong> Analyze usage data to enhance extension features.</li>
-  </ul>
+    <h3>2.3 Website Content</h3>
+    <p>The Extension does not collect or store website content, such as text, images, videos, or messages from WhatsApp Web. It only applies visual blur effects to DOM elements on the client side and does not read, store, or transmit any content.</p>
 
-  <h2>4. Data Sharing and Disclosure</h2>
-  <p>We Do not share your information with any third party</p>
-  <p>We do not sell or rent your personal information to third parties.</p>
+    <h2>3. How We Use Your Information</h2>
+    <p>The Extension uses the minimal data it accesses solely to provide its core functionality:</p>
+    <ul>
+      <li><strong>Apply Blur Effects:</strong> The Extension uses DOM manipulation to apply CSS blur effects to WhatsApp Web content based on your selected blur mode.</li>
+      <li><strong>Maintain User Preferences:</strong> The blur mode preference stored via <code>chrome.storage.sync</code> is used to ensure consistent settings across sessions and devices.</li>
+      <li><strong>Debugging and Compatibility:</strong> Local console logs help us verify that the Extension works correctly with WhatsApp Web's frequently updated UI. These logs are not stored or sent externally.</li>
+    </ul>
+    <p>We do not use your information for analytics, advertising, or any other purpose beyond the Extension's functionality.</p>
 
-  <h2>5. Data Security</h2>
-  <p>We implement industry-standard security measures to protect your data. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+    <h2>4. Data Sharing and Disclosure</h2>
+    <p>We do not share, sell, rent, or disclose any data to third parties. The Extension operates entirely on your device and does not transmit any data to external servers. Specifically:</p>
+    <ul>
+      <li>No personal information or usage data is shared with third parties.</li>
+      <li>No data is sent to our servers or any external entities.</li>
+      <li>The Extension does not integrate with third-party services that would require data sharing.</li>
+    </ul>
 
-  <h2>6. Your Rights</h2>
-  <p>You have the right to:</p>
-  <ul>
-    <li>Access and update your personal information.</li>
-    <li>Request deletion of your data.</li>
-    <li>Withdraw consent at any time.</li>
-  </ul>
+    <h2>5. Data Security</h2>
+    <p>We prioritize the security of the limited data we handle:</p>
+    <ul>
+      <li>The blur mode preference is stored securely using Chrome's <code>storage.sync</code> API, which is encrypted and managed by Google Chrome.</li>
+      <li>No sensitive data (e.g., personal information, messages) is accessed, stored, or transmitted by the Extension.</li>
+      <li>The Extension does not make network requests, reducing the risk of data exposure.</li>
+    </ul>
+    <p>While we take reasonable measures to protect the data we handle, please note that no method of electronic storage is 100% secure. Since we do not collect personal data, the risk to your privacy is minimal.</p>
 
-  <h2>7. Cookies and Tracking Technologies</h2>
-  <p>Our extension does not use cookies or tracking technologies.</p>
+    <h2>6. Your Rights</h2>
+    <p>As the Extension does not collect personal data, many traditional privacy rights (e.g., data access, deletion) do not apply. However, you have the following rights:</p>
+    <ul>
+      <li><strong>Access and Modify Preferences:</strong> You can view and change your blur mode preference at any time through the Extension's popup interface.</li>
+      <li><strong>Clear Stored Data:</strong> You can clear the stored blur mode preference by clearing your Chrome browser data (via Chrome Settings > Privacy and Security > Clear Browsing Data > Advanced > Hosted App Data).</li>
+      <li><strong>Uninstall the Extension:</strong> You can uninstall the Extension at any time, which will remove all associated data (e.g., blur mode preference) from your device.</li>
+    </ul>
 
-  <h2>8. Changes to This Privacy Policy</h2>
-  <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+    <h2>7. Cookies and Tracking Technologies</h2>
+    <p>The Extension does not use cookies, trackers, or any other tracking technologies. We do not monitor your browsing activity, collect analytics, or track your usage of the Extension or WhatsApp Web.</p>
 
-  <h2>9. Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:ronitgandotra@gmail.com">ronitgandotra@gmail.com</a>.</p>
+    <h2>8. Children's Privacy</h2>
+    <p>The Extension is not intended for use by children under the age of 13. We do not knowingly collect any data from children. If you believe a child under 13 has used the Extension, please contact us, and we will take appropriate steps to address the situation.</p>
 
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any updates will be posted on this page with an updated revision date. We encourage you to review this policy periodically to stay informed.</p>
+    <p><strong>Last Updated:</strong> May 2, 2025</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the Extension's practices, please contact us at:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:ronitgandotra@gmail.com">ronitgandotra@gmail.com</a></li>
+    </ul>
+    <p>We will respond to your inquiries as soon as possible.</p>
+
+    <div class="footer">
+      <p>&copy; 2025 WhatsApp Privacy Enhancer. All rights reserved.</p>
+    </div>
+  </div>
 </body>
 </html>
